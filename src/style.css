@@ -163,6 +163,9 @@ a[href] img:hover {
   .one-half {
     grid-column: auto / span 6;
   }
+  .one-full {
+    grid-column: auto / span 12;
+  }
 }
 
 figure {
