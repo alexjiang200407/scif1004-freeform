@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
-html {
-  overflow-x: hidden;
+html, body {
+  overflow: visible;
+}
+
+body > * {
+  /* overflow-x: hidden; */
 }
 
 @font-face {
@@ -12,10 +16,19 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Ruritania";
+  src: url("/public/fonts/Ruritania.ttf") format("truetype"),
+    url("/public/fonts/Ruritania.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   --color-paper: #f2f0e3;
   --color-primary: #e63b0e;
   --font-title: "Maximum Voltage Italic", serif;
+  --font-gothic: "Ruritania", serif;
   --font-serif: 'Lora', serif;
 }
 
@@ -129,14 +142,14 @@ a[href] img:hover {
 }
 
 @media (min-width: 768px) {
-  .info {
+  .row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2em;
   }
 }
 
-.info > * {
+.row > * {
   margin-bottom: 2rem;
 }
 
@@ -147,6 +160,9 @@ a[href] img:hover {
   .two-thirds {
     grid-column: auto / span 8;
   }
+  .one-half {
+    grid-column: auto / span 6;
+  }
 }
 
 figure {
@@ -156,7 +172,7 @@ figure {
 figure figcaption {
   padding-block: 0.5rem;
   font-size: small;
-  opacity: 0.6;
+  @apply text-neutral-600
 }
 
 a {
@@ -168,4 +184,37 @@ a {
 
 a:hover {
   opacity: 0.5;
+}
+
+p {
+  margin-bottom: 1rem;
+  @apply text-neutral-800;
+  @apply font-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-primary;
+  @apply font-title;
+}
+
+h1 {
+  @apply text-5xl font-title mb-5;
+}
+
+h2 {
+  @apply text-3xl font-title mb-5;
+}
+
+.drop-cap::first-letter {
+  float: left;
+  font-size: 5rem;
+  line-height: 1;
+  margin-block: 0.3em;
+  margin-right: 0.2em;
+  @apply font-gothic;
+  @apply text-black;
+}
+
+#space-odyssey p {
+  @apply text-xl
 }

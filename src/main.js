@@ -14,7 +14,6 @@ gsap.fromTo(
     ease: "none",
     scrollTrigger: {
       trigger: ".scroll-fade-in",
-			end: "top 2%",
 			toggleActions: "play reverse play reverse",
     }
   }
@@ -32,7 +31,6 @@ document.querySelectorAll(".scroll-swipe-right").forEach(el => {
       ease: "power3.out",
       scrollTrigger: {
         trigger: el,
-				end: "top 2%",
         toggleActions: "play reverse play reverse",
       }
     }
@@ -51,7 +49,6 @@ document.querySelectorAll(".scroll-swipe-left").forEach(el => {
       ease: "power3.out",
       scrollTrigger: {
         trigger: el,
-				end: "top -2%",
         toggleActions: "play reverse play reverse",
       }
     }
@@ -87,7 +84,6 @@ document.querySelectorAll(".scroll-swipe-bottom").forEach(el => {
       ease: "power3.out",
       scrollTrigger: {
         trigger: el,
-				end: "top 2%",
         toggleActions: "play reverse play reverse",
       }
     }
