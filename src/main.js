@@ -19,7 +19,7 @@ gsap.fromTo(
   }
 );
 
-document.querySelectorAll(".scroll-fade-in").forEach(el => 
+document.querySelectorAll("#title .scroll-fade-in").forEach(el => 
 gsap.fromTo(
   el,
   { opacity: 0 },
@@ -34,7 +34,7 @@ gsap.fromTo(
 ));
 
 // Right swipe
-document.querySelectorAll(".scroll-swipe-right").forEach(el => {
+document.querySelectorAll("#title .scroll-swipe-right").forEach(el => {
   gsap.fromTo(
     el,
     { opacity: 0, x: 50 },
@@ -53,7 +53,7 @@ document.querySelectorAll(".scroll-swipe-right").forEach(el => {
 });
 
 // Left swipe
-document.querySelectorAll(".scroll-swipe-left").forEach(el => {
+document.querySelectorAll("#title .scroll-swipe-left").forEach(el => {
   gsap.fromTo(
     el,
     { opacity: 0, x: -50 },
@@ -72,7 +72,7 @@ document.querySelectorAll(".scroll-swipe-left").forEach(el => {
 });
 
 // Top swipe
-document.querySelectorAll(".scroll-swipe-top").forEach(el => {
+document.querySelectorAll("#title .scroll-swipe-top").forEach(el => {
   gsap.fromTo(
     el,
     { opacity: 0, y: -50 },
@@ -90,7 +90,7 @@ document.querySelectorAll(".scroll-swipe-top").forEach(el => {
   );
 });
 
-document.querySelectorAll(".scroll-swipe-bottom").forEach(el => {
+document.querySelectorAll("#title .scroll-swipe-bottom").forEach(el => {
   gsap.fromTo(
     el,
     { opacity: 0, y: 50 },

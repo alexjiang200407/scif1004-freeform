@@ -4,6 +4,10 @@ html, body {
   overflow: visible;
 }
 
+body {
+  counter-reset: figure;
+}
+
 body > * {
   /* overflow-x: hidden; */
 }
@@ -220,4 +224,25 @@ h2 {
 
 #space-odyssey p {
   @apply text-xl
+}
+
+#solaris p {
+  @apply text-xl
+}
+
+#arrival p {
+  @apply text-xl
+}
+
+i {
+  display: inline-block;
+  transform: skewX(-15deg);
+}
+
+figure {
+  counter-increment: figure;
+}
+
+figcaption::before {
+  content: "Figure " counter(figure) ": ";
 }
