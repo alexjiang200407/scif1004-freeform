@@ -28,12 +28,29 @@ body > * {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Lora Italic";
+  src: url("/public/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype"),
+    url("/public/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/public/fonts/Lora-VariableFont_wght.ttf") format("truetype"),
+    url("/public/fonts/Lora-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   --color-paper: #f2f0e3;
   --color-primary: #e63b0e;
   --font-title: "Maximum Voltage Italic", serif;
   --font-gothic: "Ruritania", serif;
   --font-serif: 'Lora', serif;
+  --font-serif-italic: 'Lora Italic', serif;
 }
 
 .title-grid {
@@ -222,21 +239,12 @@ h2 {
   @apply text-black;
 }
 
-#space-odyssey p {
-  @apply text-xl
-}
-
-#solaris p {
-  @apply text-xl
-}
-
-#arrival p {
+.container p {
   @apply text-xl
 }
 
 i {
-  display: inline-block;
-  transform: skewX(-15deg);
+  @apply font-serif-italic;
 }
 
 figure {
@@ -245,4 +253,32 @@ figure {
 
 figcaption::before {
   content: "Figure " counter(figure) ": ";
+}
+
+
+.dictionary-word {
+  text-decoration: underline;
+  text-decoration-color: #99d5ff;
+  text-decoration-thickness: 1px;
+  cursor: help;
+  transition: text-decoration-thickness 0.2s ease, text-decoration-color 0.2s ease;
+  color: #2797e7;
+}
+
+
+.dictionary-word:hover {
+  text-decoration-thickness: 2px;   /* Makes underline thicker on hover */
+  color: rgb(0, 149, 255)
+}
+
+.dictionary-tooltip .dictionary-tooltip-title {
+  text-transform: capitalize;
+  @apply text-xl;
+  @apply text-black;
+  @apply font-serif;
+}
+
+.dictionary-tooltip p.dictionary-tooltip-content {
+  font-size: var(--text-sm);
+  @apply font-serif;
 }

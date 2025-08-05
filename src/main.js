@@ -2,6 +2,9 @@ import './style.css'
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css'; // optional default styling
+import 'tippy.js/themes/light.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,4 +109,24 @@ document.querySelectorAll("#title .scroll-swipe-bottom").forEach(el => {
       }
     }
   );
+});
+
+tippy('.dictionary-word', {
+  content(reference) {
+    const word = reference.getAttribute('data-word') ?? reference.textContent.trim();
+    const definition = reference.getAttribute('data-definition') || 'No definition provided.';
+    return `
+      <div class='dictionary-tooltip'>
+        <h3 class='dictionary-tooltip-title'>${word}</h3>
+				<p class='dictionary-tooltip-content'>
+        	${definition}
+				</p>
+      </div>
+    `;
+  },
+  allowHTML: true,
+  interactive: true,
+	theme: 'light',
+  maxWidth: 250,
+	trigger: 'mouseenter focus click',
 });

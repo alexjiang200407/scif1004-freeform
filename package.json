@@ -12,8 +12,10 @@
     "vite": "^7.0.4"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@tailwindcss/vite": "^4.1.11",
     "gsap": "^3.13.0",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "tippy.js": "^6.3.7"
   }
 }
