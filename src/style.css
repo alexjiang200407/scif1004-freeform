@@ -14,32 +14,32 @@ body > * {
 
 @font-face {
   font-family: "Maximum Voltage Italic";
-  src: url("/public/fonts/Maximum\ Voltage\ Italic.ttf") format("truetype"),
-    url("/public/fonts/Maximum\ Voltage\ Italic.ttf") format("truetype");
+  src: url("/fonts/Maximum\ Voltage\ Italic.ttf") format("truetype"),
+    url("/fonts/Maximum\ Voltage\ Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Ruritania";
-  src: url("/public/fonts/Ruritania.ttf") format("truetype"),
-    url("/public/fonts/Ruritania.ttf") format("truetype");
+  src: url("/fonts/Ruritania.ttf") format("truetype"),
+    url("/fonts/Ruritania.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lora Italic";
-  src: url("/public/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype"),
-    url("/public/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype"),
+    url("/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lora";
-  src: url("/public/fonts/Lora-VariableFont_wght.ttf") format("truetype"),
-    url("/public/fonts/Lora-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Lora-VariableFont_wght.ttf") format("truetype"),
+    url("/fonts/Lora-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
